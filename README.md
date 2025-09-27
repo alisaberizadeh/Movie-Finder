@@ -39,7 +39,7 @@
 
 ## 🛠 Technologies
 - **Next.js (App Router)**
-- - **TypeScript**  
+- **TypeScript**  
 - **React Context + LocalStorage** for favorite movies  
 - **React Hook Form**  
 - **Axios**  
