@@ -54,7 +54,8 @@
 ```bash
 git clone https://github.com/your-username/movie-finder.git
 
-2.
+2.Install dependencies:
+```bash
 cd movie-finder
 npm install
 # or
