@@ -50,15 +50,31 @@
 
 ## 💻 Installation and Running
 
-1. Clone the repository:
-```bash
+# 1. Clone the repository
 git clone https://github.com/your-username/movie-finder.git
-
-##
-
-2. Install dependencies:
-```bash
 cd movie-finder
+
+# 2. Install dependencies
 npm install
 # or
 yarn
+
+# 3. Create .env.local file in the root directory
+# and add your OMDB API key:
+# NEXT_PUBLIC_OMDB_API_KEY=your_api_key_here
+
+# 4. Run the development server
+npm run dev
+# or
+yarn dev
+
+# 5. Open the app in your browser
+# http://localhost:3000
+
+# 6. Build for production
+npm run build
+npm run start
+# or
+yarn build
+yarn start
+
