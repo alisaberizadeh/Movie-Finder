@@ -53,3 +53,9 @@
 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/movie-finder.git
+
+2.
+cd movie-finder
+npm install
+# or
+yarn
