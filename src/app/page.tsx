@@ -3,7 +3,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { CiSearch, CiLink } from "react-icons/ci";
 import axios from "axios";
 import { IMoveis } from "@/lib/types";
@@ -19,16 +19,16 @@ export default function Home() {
   const API_KEY = "50091bfc";
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState<IMoveis[]>([]);
-
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
 
   const { favorites } = useContext(FavoritesContext);
   const { register, handleSubmit, setValue, getValues, formState: { errors } } = useForm<FormData>();
-  const searchParams = useSearchParams();
   const router = useRouter();
 
+  // فقط داخل useEffect از useSearchParams استفاده کن
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
     const queryParam = searchParams.get("query");
     const pageParam = Number(searchParams.get("page") || 1);
 
@@ -36,7 +36,7 @@ export default function Home() {
       setValue("value", queryParam);
       find({ value: queryParam }, pageParam);
     }
-  }, [searchParams]);
+  }, []);
 
   const find = async (data: FormData, pageNumber:number) => {
     const value = data.value.trim();
