@@ -12,7 +12,7 @@
 ---
 
 ## 🌐 Live Demo
-[Movie Finder Demo](https://your-demo-link.com)  <!-- Replace with your demo link -->
+[Movie Finder Demo](https://movie-finder-f37c3.vercel.app/)  <!-- Replace with your demo link -->
 
 ---
 
